@@ -19,3 +19,4 @@ function getApi(requestUrl) {
 
 responseText.appendChild(image)
 getApi(requestUrl);
+//Adding a test comment here 
