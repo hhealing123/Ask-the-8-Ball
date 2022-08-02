@@ -1,3 +1,4 @@
+//Change to textBox later
 var userName = "name";
 
 //Get # of stored names from localStorage
