@@ -2,7 +2,7 @@
 var requestUrl = 'https://api.multiavatar.com/';
 
 //This enteredUser variable will change to contain whatever text is entered into the username box
-var enteredUser = "Leland"
+var enteredUser = localStorage.getItem("CurrentUsername");
 
 //toAttach is wherever on the HTML the avatar container will be appended to
 var toAttach = document.getElementById('box');
@@ -24,8 +24,7 @@ avatarNameElement.style.margin = 'auto';
 const image = document.createElement('img');
 
 function getApi(requestUrl) {
-    //sets username to all lowercase when passed into api in order for input to not be case-sensitive
-    let avatarId = enteredUser.toLocaleLowerCase();
+    let avatarId = enteredUser;
     fetch('https://api.multiavatar.com/'+JSON.stringify(avatarId)+'.svg')
         .then(function(response) {
             console.log(response);
@@ -47,3 +46,33 @@ avatarContainer.appendChild(avatarNameElement);
 toAttach.appendChild(avatarContainer);
 
 getApi(requestUrl);
+
+
+//8ball
+var inputQuestion = document.getElementById("questionInput");
+var ask8BallButton = document.getElementById("ask8BallButton");
+
+var currentQuestion = '';
+
+/*
+var userStoredDataExample = {
+    name: "name",
+    prevQuestions: [["Question?", "Answer", "Aff/Neg"], ["Question?", "Answer", "Aff/Neg"]]
+}
+
+var currentUser = {};
+
+for (user in localStorage){
+    if (enteredUser === user.name){
+        currentUser = user;
+        break;
+    }
+}
+*/
+
+
+ask8BallButton.addEventListener("click", function(){
+    currentQuestion = inputQuestion.value;
+    console.log(currentQuestion);
+    inputQuestion.value = '';
+})
