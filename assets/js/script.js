@@ -2,7 +2,7 @@
 var requestUrl = 'https://api.multiavatar.com/';
 
 //This enteredUser variable will change to contain whatever text is entered into the username box
-var enteredUser = "Matteo"
+var enteredUser = "Leland"
 
 //toAttach is wherever on the HTML the avatar container will be appended to
 var toAttach = document.getElementById('box');
@@ -24,7 +24,8 @@ avatarNameElement.style.margin = 'auto';
 const image = document.createElement('img');
 
 function getApi(requestUrl) {
-    let avatarId = enteredUser
+    //sets username to all lowercase when passed into api in order for input to not be case-sensitive
+    let avatarId = enteredUser.toLocaleLowerCase();
     fetch('https://api.multiavatar.com/'+JSON.stringify(avatarId)+'.svg')
         .then(function(response) {
             console.log(response);
