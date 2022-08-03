@@ -21,8 +21,27 @@
 
   <body>
     <!-- Play the Magic 8 Ball page -->
-    <div class="playGames-container">
-      <h1 class="">Ask the Magic 8 Ball</h1>
+    <!-- Materialize Fixed NavBar -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo center">Ask the Magic 8 Ball</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a class="blue-text text-darken-2" href="#!">Name</a></li>
+            <li><a class="blue-text text-darken-2" href="#!">Avatar</a></li>
+          </ul>
+          <ul class="left hide-on-med-and-down blue-text">
+            <li>
+              <a href="#playGame">8 Ball</a>
+            </li>
+            <li><a href="#previousQuestions">Previous Questions</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <section id="playGame" class="playGames-container">
+      <h1 class="red-text text-darken-2">Magic 8 Ball picture here!</h1>
       <!-- Add graphic link below -->
 
       <h2>Type your questions here!</h2>
@@ -30,9 +49,14 @@
         Submit
       </button>
       <input type="" placeholder="Type your question here!" />
-    </div>
+    </section>
     <!-- Play the Magic 8 Ball page -->
+    <section id="previousQuestions" class="playGames-container">
+      <h1 class="">Previous Questions</h1>
+      <!-- Add graphic link below -->
 
+      <h2>List of questions here!</h2>
+    </section>
     <script src="./assets/js/script.js"></script>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>

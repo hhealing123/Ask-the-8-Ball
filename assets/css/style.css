@@ -7,3 +7,16 @@ h2 {
 .playGames-container {
   text-align: center;
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-color: whitesmoke;
+  /* Scroll Snap */
+  scroll-snap-align: center;
+}
