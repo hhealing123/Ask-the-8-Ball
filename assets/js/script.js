@@ -1,4 +1,5 @@
 var luck = document.querySelector("button");
+var result = document.querySelector('.result');
 
 const options = {
   method: 'GET',
@@ -13,6 +14,12 @@ const options = {
 luck.onclick = function(answer){
     fetch('https://magic-8-ball1.p.rapidapi.com/my_answer/', options)
 	.then(response => response.json())
-	.then(response => console.log(response))
+  .then(data =>{
+    var ballResult = data['answer'];
+    result.innerHTML = ballResult;
+  })
 	.catch(err => console.error(err));
+
 }
+
+result.innerHTML = answer;
