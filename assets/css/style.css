@@ -20,3 +20,11 @@ section {
   /* Scroll Snap */
   scroll-snap-align: center;
 }
+
+#welcomePage {
+  font-size: 55px !important;
+}
+
+#playGameTitle {
+  font-size: 100px !important;
+}
