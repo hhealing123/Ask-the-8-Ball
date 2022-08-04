@@ -52,7 +52,15 @@ getApi(requestUrl);
 var inputQuestion = document.getElementById("questionInput");
 var ask8BallButton = document.getElementById("ask8BallButton");
 
+//will be set to element of the current question in html input box
 var currentQuestion = '';
+
+//will be set to element of current 8ball response in html text box
+var newest8BallResponse = '';
+
+//will be set to element of current 8ball affirmative/negative response
+//consider using a boolean here
+var newest8BallAffNeg = '';
 
 /*
 var userStoredDataExample = {
