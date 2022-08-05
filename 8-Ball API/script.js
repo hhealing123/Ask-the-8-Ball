@@ -1,6 +1,5 @@
 var luck = document.querySelector("button");
 var result = document.querySelector('.result');
-var question = document.querySelector('.question').value;
 
 const options = {
   method: 'GET',
@@ -12,20 +11,25 @@ const options = {
   }
 }
 
+let questions = []
 luck.onclick = function(){
+  let question;
+  question = document.getElementById('question').value;
   fetch('https://magic-8-ball1.p.rapidapi.com/my_answer/', options)
   .then(response => response.json())
   .then(data =>{
     var ballResult = data['answer'];
-
+    var aff = data['answer_type'];
+    console.log(ballResult + ' ' + aff)
     result.innerHTML = ballResult;
   })
-  fetch('https://magic-8-ball1.p.rapidapi.com/my_answer/', options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-	.catch(err => console.error(err));
+  console.log(question);
+  questions.push(question);
 
+  localStorage.setItem('UserQuestion', JSON.stringify(question) );
 }
+
+
 
 
 
