@@ -84,3 +84,21 @@ ask8BallButton.addEventListener("click", function(){
     console.log(currentQuestion);
     inputQuestion.value = '';
 })
+
+
+/*
+var user = {
+    name: "Sam",
+    questions: []
+}
+
+user.questions.push(["enteredquestion,", "Yes.", "Affirmative"]);
+user.questions.push(["Does my dad love me?", "Signs point to no.", "Negative"]);
+
+console.log("This is user object before storage:", user);
+var userStr = JSON.stringify(user);
+
+localStorage.setItem("TestUser", userStr);
+var postMortem = JSON.parse(localStorage.getItem("TestUser"));
+console.log("This is user object after storage:", postMortem);
+*/
