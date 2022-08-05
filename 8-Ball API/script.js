@@ -25,8 +25,8 @@ luck.onclick = function(){
   })
   console.log(question);
   questions.push(question);
-
   localStorage.setItem('UserQuestion', JSON.stringify(question) );
+
 }
 
 
