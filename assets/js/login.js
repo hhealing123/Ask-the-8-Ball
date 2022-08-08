@@ -8,5 +8,5 @@ usernameButton.addEventListener("click", function(){
     username = enteredUsernameEl.value;
     console.log(username);
     localStorage.setItem("CurrentUsername", username);
-    window.location.replace("login.html");
+    window.location.replace("index.html");
 })

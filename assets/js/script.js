@@ -5,7 +5,7 @@ var requestUrl = 'https://api.multiavatar.com/';
 var enteredUser = localStorage.getItem("CurrentUsername");
 
 //toAttach is wherever on the HTML the avatar container will be appended to
-var toAttach = document.getElementById('box');
+var toAttach = document.getElementById('navbar');
 
 //creating the container for avatar picture and user name
 var avatarContainer = document.createElement('div');
@@ -15,7 +15,7 @@ var avatarNameElement = document.createElement('p');
 avatarNameElement.textContent = enteredUser;
 
 //TEMPORARY BORDER- to show where the container extends
-avatarContainer.style.border = '5px solid pink';
+//avatarContainer.style.border = '5px solid pink';
 
 //hardcoded style attribute to display contents of container inline
 avatarContainer.style.display = 'inline-flex';
