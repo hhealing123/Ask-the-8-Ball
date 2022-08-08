@@ -21,18 +21,56 @@
 
   <body>
     <!-- Play the Magic 8 Ball page -->
-    <div class="playGames-container">
-      <h1 class="">Ask the Magic 8 Ball</h1>
-      <!-- Add graphic link below -->
-
+    <!-- Materialize Fixed NavBar -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <!-- <a id="playGame" href="#!" class="brand-logo center"
+            >Ask the Magic 8 Ball</a
+          > -->
+          <ul class="right hide-on-med-and-down">
+            <li><a class="blue-text text-darken-2" href="#!">Name</a></li>
+            <li><a class="blue-text text-darken-2" href="#!">Avatar</a></li>
+          </ul>
+          <ul class="left hide-on-med-and-down">
+            <li>
+              <a href="login.html">Welcome Page</a>
+            </li>
+            <li>
+              <a href="#playGame">8 Ball</a>
+            </li>
+            <li><a href="#previousQuestions">Previous Questions</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Play the Magic 8 Ball sect -->
+    <section id="playGame" class="playGames-container">
+      <h1 id="playGameTitle" class="playGameTitle blue-text text-darken-2">
+        Play the Magic 8 Ball
+      </h1>
+      <br /><br /><br /><br />
+      <!--<h1 class="red-text text-darken-2">Magic 8 Ball picture here!</h1> -->
+      <!-- 8 Ball Animation -->
+      <img src="https://piskel-imgstore-b.appspot.com/img/3cf3515c-1451-11ed-a2dd-f1b5740cb228.gif" alt="8BallAnimation" id="eightBA">
       <h2>Type your questions here!</h2>
       <button id="typeQuestion" class="btn btn-primary btn-lg btn-lg-primary">
-        Submit
+      Submit
       </button>
+      <br />
       <input type="" placeholder="Type your question here!" />
-    </div>
-    <!-- Play the Magic 8 Ball page -->
+    </section>
 
+    <!-- Shows Previous Questions -->
+    <section id="previousQuestions" class="playGames-container">
+      <h1 class="">Previous Questions</h1>
+      <!-- Add graphic link below -->
+
+      <!-- TODO: Add code to show questions below -->
+      <h2>List of questions here!</h2>
+    </section>
+
+    <!-- Link to --JavaScript below -->
     <script src="./assets/js/script.js"></script>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
