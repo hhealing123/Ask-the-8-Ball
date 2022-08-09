@@ -35,7 +35,7 @@ luck.onclick = function(){
 }
 
 
-<<<<<<< HEAD
+
 //8Ball gif URLS
 var ballGifs = [
 "https://piskel-imgstore-b.appspot.com/img/9bafd921-1465-11ed-9776-f1b5740cb228.gif", //8Ball Spin
