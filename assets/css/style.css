@@ -38,6 +38,10 @@ section {
   font-size: 100px !important;
 }
 
+#enteredUNButton {
+  margin-bottom: 10px;
+}
+
 #eightBA {
   height: 60%;
   margin-top: 0;
