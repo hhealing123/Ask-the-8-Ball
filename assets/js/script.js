@@ -1,3 +1,29 @@
+//8Ball gif URLS
+var ballGifs = [
+"https://piskel-imgstore-b.appspot.com/img/9bafd921-1465-11ed-9776-f1b5740cb228.gif",
+"https://piskel-imgstore-b.appspot.com/img/bcfb9e40-1465-11ed-a932-f1b5740cb228.gif",
+"https://piskel-imgstore-b.appspot.com/img/d81a7a78-1465-11ed-b838-f1b5740cb228.gif",
+"https://piskel-imgstore-b.appspot.com/img/dc1a19cf-1741-11ed-ab19-e7af349a0ea9.gif",
+"https://piskel-imgstore-b.appspot.com/img/0350cba1-1742-11ed-8d2f-e7af349a0ea9.gif",
+"https://piskel-imgstore-b.appspot.com/img/21ede494-1742-11ed-ab0e-e7af349a0ea9.gif",
+"https://piskel-imgstore-b.appspot.com/img/6892bb40-1742-11ed-8e72-e7af349a0ea9.gif",
+"https://piskel-imgstore-b.appspot.com/img/89094c57-1742-11ed-ac9d-e7af349a0ea9.gif",
+"https://piskel-imgstore-b.appspot.com/img/6d41a18a-1747-11ed-9a9f-e7af349a0ea9.gif",
+"https://piskel-imgstore-b.appspot.com/img/9b6e3c11-1747-11ed-9f48-11a17a993152.gif",
+"https://piskel-imgstore-b.appspot.com/img/c5ef21a3-1747-11ed-84b7-11a17a993152.gif",
+"https://piskel-imgstore-b.appspot.com/img/1aac2ea6-1743-11ed-a054-e7af349a0ea9.gif",
+"https://piskel-imgstore-b.appspot.com/img/ee6c4935-1747-11ed-be38-11a17a993152.gif",
+"https://piskel-imgstore-b.appspot.com/img/312c5d73-1748-11ed-8c88-11a17a993152.gif",
+"https://piskel-imgstore-b.appspot.com/img/480313e3-1748-11ed-93c9-11a17a993152.gif",
+"https://piskel-imgstore-b.appspot.com/img/6a014326-1748-11ed-a08c-11a17a993152.gif",
+"https://piskel-imgstore-b.appspot.com/img/7e4df75c-1748-11ed-af04-11a17a993152.gif",
+"https://piskel-imgstore-b.appspot.com/img/9a1e84cc-1748-11ed-bf04-11a17a993152.gif",
+"https://piskel-imgstore-b.appspot.com/img/da4c5754-1748-11ed-8fee-11a17a993152.gif",
+"https://piskel-imgstore-b.appspot.com/img/f48ec7a1-1748-11ed-a4f0-11a17a993152.gif",
+"https://piskel-imgstore-b.appspot.com/img/0d3c047d-1749-11ed-9fdd-11a17a993152.gif",
+"https://piskel-imgstore-b.appspot.com/img/278a5428-1749-11ed-8794-11a17a993152.gif"
+]
+
 //API request URL
 var requestUrl = 'https://api.multiavatar.com/';
 
