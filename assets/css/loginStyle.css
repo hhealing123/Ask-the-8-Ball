@@ -2,7 +2,7 @@
     height: 40%;
     width: 20%;
 }
-
+/* 
 span[game-descr] {
     position: relative;
     cursor: grab;
@@ -37,4 +37,4 @@ span[game-intro]:hover::after {
     background-color: rgb(132, 126, 216);
     color: #fff;
     z-index: 1;
-}
+} */
