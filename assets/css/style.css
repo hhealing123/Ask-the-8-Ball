@@ -32,3 +32,8 @@ section {
 #eightBA {
   height: 60%;
 }
+
+#navbar {
+  margin: 0;
+  padding: 0;
+}
