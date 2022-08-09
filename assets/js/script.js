@@ -58,8 +58,8 @@ function getApi(requestUrl) {
       "https://api.multiavatar.com/" + JSON.stringify(avatarId) + ".svg"
     );
     //hardcoded image width and height, can be later changed into flex or percentage
-    image.setAttribute("height", 50);
-    image.setAttribute("width", 50);
+    image.setAttribute("height", 55);
+    image.setAttribute("width", 55);
   });
 }
 
