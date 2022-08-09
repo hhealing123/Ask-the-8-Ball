@@ -15,20 +15,13 @@ const options = {
 var ballResult = "";
 var affCom = "";
 
-luck.onclick = function(){
-  let question;
-  question = document.getElementById('questionInput').value;
-  fetch('https://magic-8-ball1.p.rapidapi.com/my_answer/', options)
-  .then(response => response.json())
-  .then(data =>{
-    ballResult = data['answer'];
-    affCom = data['answer_type'];
-    update8BallImage(ballResult);
-    console.log(ballResult + ' ' + affCom)
-  })
-
-  console.log(question);
-}
+//wokring here
+const address = fetch('https://magic-8-ball1.p.rapidapi.com/my_answer/', options)
+    .then(response => response.json())
+    .then(data => {
+        let answerObject = [data['answer'], data['answer_type']]
+        return answerObject
+    })
 
 
 //8Ball gif URLS
@@ -91,7 +84,7 @@ avatarNameElement.style.margin = 'auto';
 
 const image = document.createElement('img');
 
-function getApi(requestUrl) {
+function getApi() {
     let avatarId = enteredUser;
     fetch('https://api.multiavatar.com/'+JSON.stringify(avatarId)+'.svg')
         .then(function(response) {
@@ -113,7 +106,7 @@ avatarContainer.appendChild(avatarNameElement);
 //adding container to whatever element is in toAttach
 toAttach.appendChild(avatarContainer);
 
-getApi(requestUrl);
+getApi();
 
 
 //8ball
@@ -144,6 +137,10 @@ function addQuestion(userName, questionInput, questionAnswer, questionAffCom){
 
     user = JSON.parse(localStorage.getItem(userName));
 
+    address.then((a) => {
+        
+    });
+
     let questionItem = [questionInput, questionAnswer, questionAffCom];
     user.questions.push(questionItem);
 
@@ -152,9 +149,13 @@ function addQuestion(userName, questionInput, questionAnswer, questionAffCom){
 }
 
 ask8BallButton.addEventListener("click", function(){
-    currentQuestion = inputQuestion.value;
+    answerObject = get8BallAnswer();
+    console.log("HERE-------");
+    console.log(answerObject);
+    console.log("HERE-------");
+    //currentQuestion = inputQuestion.value;
     console.log(currentQuestion);
-    addQuestion(enteredUser, inputQuestion.value, ballResult, affCom);
+    //addQuestion(enteredUser, inputQuestion.value, ballResult, affCom);
     inputQuestion.value = '';
 })
 //8Ball gif URLS
