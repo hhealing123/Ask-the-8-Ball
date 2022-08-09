@@ -14,14 +14,26 @@ const options = {
 
 luck.onclick = function(){
   let question;
-  question = document.getElementById('question').value;
+  question = document.getElementById('questionInput').value;
   fetch('https://magic-8-ball1.p.rapidapi.com/my_answer/', options)
   .then(response => response.json())
   .then(data =>{
     var ballResult = data['answer'];
     var aff = data['answer_type'];
     console.log(ballResult + ' ' + aff)
-    result.innerHTML = ballResult;
+    // result.innerHTML = ballResult;
+    if (aff == 'non_committal'){
+      document.body.style.removeProperty('background-color');
+      document.body.style.backgroundColor="yellow";
+    }
+    if (aff == 'negative'){
+      document.body.style.removeProperty('background-color');
+      document.body.style.backgroundColor="red";
+    }
+    if (aff == 'affirmative'){
+      document.body.style.removeProperty('background-color');
+      document.body.style.backgroundColor="green";
+    }
   })
   console.log(question);
 
