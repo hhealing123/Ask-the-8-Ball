@@ -6,9 +6,13 @@ var username = "ERROR";
 
 usernameButton.addEventListener("click", function(){
     username = enteredUsernameEl.value;
+    if(username!=""){
+        
     console.log(username);
     localStorage.setItem("CurrentUsername", username);
     window.location.replace("index.html");
+    }
+    
 })
 
 $( function() {
