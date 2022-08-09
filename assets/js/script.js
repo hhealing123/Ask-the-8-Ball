@@ -110,21 +110,7 @@ function addQuestion(userName, questionInput){
 
 
 var currentUser = {};
-/*
-var userStoredDataExample = {
-    name: "name",
-    prevQuestions: [["Question?", "Answer", "Aff/Neg"], ["Question?", "Answer", "Aff/Neg"]]
-}
 
-var currentUser = {};
-
-for (user in localStorage){
-    if (enteredUser === user.name){
-        currentUser = user;
-        break;
-    }
-}
-*/
 
 
 ask8BallButton.addEventListener("click", function(){
