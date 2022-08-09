@@ -12,6 +12,10 @@ const options = {
   }
 }
 
+function changebackground(){
+    document.body.style.backgroundColor ="yellow";
+}
+
 luck.onclick = function(){
   let question;
   question = document.getElementById('questionInput').value;
@@ -23,16 +27,29 @@ luck.onclick = function(){
     update8BallImage(ballResult);
     console.log(ballResult + ' ' + aff)
     //result.innerHTML = ballResult;
-    if (aff == 'non-committal'){
-      document.body.style.background = 'yellow';
-    }
+    if (aff == "non_committal"){
+        document.body.style.removeProperty('background-color');
+        document.body.style.backgroundColor="yellow";
+      }
+    if (aff == "negative"){
+        document.body.style.removeProperty('background-color');
+        document.body.style.backgroundColor="red";
+      }
+    if (aff == "affirmative"){
+        document.body.style.removeProperty('background-color');
+        document.body.style.backgroundColor="green";
+      }
   })
+
+
 
   console.log(question);
   //check what answer is, display gif based on answer
 
   
 }
+
+
 
 
 
