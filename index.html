@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="assets/css/materialize.min.css"
+      media="screen,projection"
+    />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- Play the Magic 8 Ball page -->
+    <!-- Materialize Fixed NavBar -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <!-- <a id="playGame" href="#!" class="brand-logo center"
+            >Ask the Magic 8 Ball</a
+          > -->
+          <ul class="right hide-on-med-and-down" id="navbar">
+          </ul>
+          <ul class="left hide-on-med-and-down">
+            <li>
+              <a href="login.html">Welcome Page</a>
+            </li>
+            <li>
+              <a href="#playGame">8 Ball</a>
+            </li>
+            <li><a href="#previousQuestions">Previous Questions</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Play the Magic 8 Ball sect -->
+    <section id="playGame" class="playGames-container">
+      <h1 id="playGameTitle" class="playGameTitle blue-text text-darken-2">
+        Play the Magic 8 Ball
+      </h1>
+      <br /><br /><br /><br />
+      <!--<h1 class="red-text text-darken-2">Magic 8 Ball picture here!</h1> -->
+      <!-- 8 Ball Animation -->
+      <img src="https://piskel-imgstore-b.appspot.com/img/3cf3515c-1451-11ed-a2dd-f1b5740cb228.gif" alt="8BallAnimation" id="eightBA">
+      <h2>Type your questions here!</h2>
+      <button id="ask8BallButton" class="btn btn-primary btn-lg btn-lg-primary">
+      Submit
+      </button>
+      <br />
+      <input type="" id="questionInput" placeholder="Type your question here!" />
+    </section>
+
+    <!-- Shows Previous Questions -->
+    <section id="previousQuestions" class="playGames-container">
+      <h1 class="">Previous Questions</h1>
+      <!-- Add graphic link below -->
+
+      <!-- TODO: Add code to show questions below -->
+      <h2>List of questions here!</h2>
+    </section>
+
+    <!-- Link to --JavaScript below -->
+    <script src="./assets/js/script.js"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+  </body>
+</html>
