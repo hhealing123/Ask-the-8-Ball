@@ -45,6 +45,7 @@ SO THAT I can decide whether or not to perform an action to the questions that I
 ## Screenshot of the Application and Link to the Deployed Application
 * Login Page<img src = "./assets/images/login.JPG">
 * Game Page<img src = "./assets/images/gamepage.JPG">
+* [Link to the Deployed Application](https://hhealing123.github.io/Ask-the-8-Ball/login.html)
 
 ## Video Demo of Magic 8 Ball Application
 * [Video Demo Link](https://user-images.githubusercontent.com/106945679/183773262-e9ab76a4-121e-4ef6-8c20-6892d4deac91.mp4)
