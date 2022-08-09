@@ -33,14 +33,31 @@ SO THAT I can decide whether or not to perform an action to the questions that I
 * If I insert a question and press "Enter". Then the 8 Ball will reply to the question.
 * If I press "Previous Qeestions" button. Then it will allow me to view all previously asked questions.
 
+## Project Requirements
+* Must use at least two server-side APIs.
+* Must use client-side storage to store persistent data.
+* Must have a polished UI.
+* Must meet good quality coding standards (indentation, scoping, naming, etc.)
+* Must NOT use alerts, confirms, or prompts.
+* Must be deployed to GitHub pages.
+* Must be interactive (i.e: accept and respond to user input).
+
 ## Screenshot of the Application and Link to the Deployed Application
-* [Login Page]<img src = "./assets/images/login.JPG">
-* [Game Page]<img src = "./assets/images/gamepage.JPG">
+* Login Page<img src = "./assets/images/login.JPG">
+* Game Page<img src = "./assets/images/gamepage.JPG">
 
 ## Video Demo of Magic 8 Ball Application
 * [Video Demo Link]()
 
 ## Challenging Moments and Final Thoughts!
+Although this project was entertaining and helpful towards all of our careers, but we went through couple of challenging moments during the duration of making the Magic 8 Ball Application. 
+For instance, we fairly came up early with what application we would want make for our project; however, it took us quite a bit to determine features and appearance of our application, such as functions, user-friendly design, easy navigation, and etc. We overcame the issue by brainstorming with the project members, creating wireframe of the application, determining user story of the application, and researching and finding appropriate APIs for the project.    
+
+Another issue that we came along was when we tried to merge different branches that we were working on to 'dev' branch. For some reason merging our branches into one branch did not work as smooth as we thought it would be. The major issue that we had was that everyone tried to merge their branches all at once which created merge conflicts. This issue was easily resolved by merging one branch at a time; for instance, we merged our HTML files so that we have actual structure for the web page, then merged CSS files and JavaScript files to add styles and functionalities.
+
+The last issue that we think we had while creating the application was rather simple, which was naming variables, classes, ids, and etc. with correct names. We thought this would consume the longest time; however, it was not as time consuming as we thought it would be. All we had to do was discuss with each other and determine the correct names. Even if we could not figure it out, we could always use DevTools to identify why the application did not work.
+
+We do not believe that we encountered any issues regarding meeting deadlines, failure to meet daily project goals, or inresponsibility towards the project; everyone successfully met the deadline, as well as being responsible to meet daily project goals that were discussed during the stand-ups, and we all worked together and assisted one another whenever we were stuck at certain points. 
 
 ## Contributors!
 * Jose Otero
