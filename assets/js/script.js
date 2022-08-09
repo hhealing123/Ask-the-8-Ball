@@ -22,10 +22,17 @@ luck.onclick = function(){
     var aff = data['answer_type'];
     console.log(ballResult + ' ' + aff)
     //result.innerHTML = ballResult;
+    if (aff == 'non-committal'){
+      document.body.style.background = 'yellow';
+    }
   })
+
   console.log(question);
   //check what answer is, display gif based on answer
+
+  
 }
+
 
 //8Ball gif URLS
 var ballGifs = [
