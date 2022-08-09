@@ -27,7 +27,7 @@ function updateBackground(questionStatus){
       }
     if (questionStatus == "reset"){
         document.body.style.removeProperty('background-color');
-        document.body.style.backgroundColor="whitesmoke";
+        document.body.style.backgroundColor="LightSlateGray";
     }
 }
 
