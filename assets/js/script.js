@@ -2,7 +2,7 @@
 //fix element id's if needed
 var luck = document.querySelector("button");
 //var result = document.querySelector('.result');
-
+var section = document.querySelector('section');
 const options = {
   method: 'GET',
   url: 'https://magic-8-ball1.p.rapidapi.com/my_answer/',
@@ -26,15 +26,15 @@ luck.onclick = function(){
     update8BallImage(ballResult);
     console.log(ballResult + ' ' + affCom)
     //result.innerHTML = ballResult;
-    if (aff == "non_committal"){
+    if (affCom == "non_committal"){
         document.body.style.removeProperty('background-color');
         document.body.style.backgroundColor="yellow";
       }
-    if (aff == "negative"){
+    if (affCom == "negative"){
         document.body.style.removeProperty('background-color');
         document.body.style.backgroundColor="red";
       }
-    if (aff == "affirmative"){
+    if (affCom == "affirmative"){
         document.body.style.removeProperty('background-color');
         document.body.style.backgroundColor="green";
       }
