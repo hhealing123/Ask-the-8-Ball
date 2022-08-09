@@ -15,15 +15,6 @@ const options = {
 var ballResult = "";
 var affCom = "";
 
-//wokring here
-const address = fetch('https://magic-8-ball1.p.rapidapi.com/my_answer/', options)
-    .then(response => response.json())
-    .then(data => {
-        let answerObject = [data['answer'], data['answer_type']]
-        return answerObject
-    })
-
-
 //8Ball gif URLS
 var ballGifs = [
 "https://piskel-imgstore-b.appspot.com/img/9bafd921-1465-11ed-9776-f1b5740cb228.gif", //8Ball Spin
@@ -133,29 +124,32 @@ function createNewUser(nameInput){
     
 }
 //Takes the inputted question and adds it to the user. NOTE: Assumes the user has already been created
-function addQuestion(userName, questionInput, questionAnswer, questionAffCom){
+function addQuestion(userName, questionInput){
 
     user = JSON.parse(localStorage.getItem(userName));
 
+
+    const address =
+    fetch('https://magic-8-ball1.p.rapidapi.com/my_answer/', options)
+    .then(response => response.json())
+    .then(data => {
+        let answerObject = [data['answer'], data['answer_type']]
+        return answerObject
+    })
+
     address.then((a) => {
-        
+        let questionAnswer = a[0]
+        let questionAffCom = a[1]
+        let questionItem = [questionInput, questionAnswer, questionAffCom];
+        user.questions.push(questionItem);
+        localStorage.setItem(userName, JSON.stringify(user));
     });
-
-    let questionItem = [questionInput, questionAnswer, questionAffCom];
-    user.questions.push(questionItem);
-
-    localStorage.setItem(userName, JSON.stringify(user));
-
 }
 
 ask8BallButton.addEventListener("click", function(){
-    answerObject = get8BallAnswer();
-    console.log("HERE-------");
-    console.log(answerObject);
-    console.log("HERE-------");
-    //currentQuestion = inputQuestion.value;
+    currentQuestion = inputQuestion.value;
     console.log(currentQuestion);
-    //addQuestion(enteredUser, inputQuestion.value, ballResult, affCom);
+    addQuestion(enteredUser, inputQuestion.value);
     inputQuestion.value = '';
 })
 //8Ball gif URLS

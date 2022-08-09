@@ -10,7 +10,3 @@ usernameButton.addEventListener("click", function(){
     localStorage.setItem("CurrentUsername", username);
     window.location.replace("index.html");
 })
-
-$( function() {
-    $( document ).tooltip();
-  } );
