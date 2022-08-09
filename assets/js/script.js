@@ -12,9 +12,8 @@ const options = {
   }
 }
 
-function changebackground(){
-    document.body.style.backgroundColor ="yellow";
-}
+var ballResult = "";
+var affCom = "";
 
 luck.onclick = function(){
   let question;
@@ -22,10 +21,10 @@ luck.onclick = function(){
   fetch('https://magic-8-ball1.p.rapidapi.com/my_answer/', options)
   .then(response => response.json())
   .then(data =>{
-    var ballResult = data['answer'];
-    var aff = data['answer_type'];
     update8BallImage(ballResult);
-    console.log(ballResult + ' ' + aff)
+    ballResult = data['answer'];
+    affCom = data['answer_type'];
+    console.log(ballResult + ' ' + affCom)
     //result.innerHTML = ballResult;
     if (aff == "non_committal"){
         document.body.style.removeProperty('background-color');
@@ -45,12 +44,7 @@ luck.onclick = function(){
 
   console.log(question);
   //check what answer is, display gif based on answer
-
-  
 }
-
-
-
 
 
 //8Ball gif URLS
@@ -86,6 +80,14 @@ var requestUrl = 'https://api.multiavatar.com/';
 
 //This enteredUser variable will change to contain whatever text is entered into the username box
 var enteredUser = localStorage.getItem("CurrentUsername");
+
+//Check if user is new user
+if (localStorage.getItem(enteredUser) == null){
+    createNewUser(enteredUser);
+    console.log("New user, created new user with username: ", enteredUser);
+} else {
+    console.log("USER: ", localStorage.getItem(enteredUser));
+}
 
 //toAttach is wherever on the HTML the avatar container will be appended to
 var toAttach = document.getElementById('box');
@@ -154,20 +156,21 @@ function createNewUser(nameInput){
     
 }
 //Takes the inputted question and adds it to the user. NOTE: Assumes the user has already been created
-function addQuestion(userName, questionInput){
+function addQuestion(userName, questionInput, questionAnswer, questionAffCom){
 
     user = JSON.parse(localStorage.getItem(userName));
 
-    user.questions.push(questionInput);
+    let questionItem = [questionInput, questionAnswer, questionAffCom];
+    user.questions.push(questionItem);
 
     localStorage.setItem(userName, JSON.stringify(user));
 
 }
 
-
 ask8BallButton.addEventListener("click", function(){
     currentQuestion = inputQuestion.value;
     console.log(currentQuestion);
+    addQuestion(enteredUser, inputQuestion.value, ballResult, affCom);
     inputQuestion.value = '';
 })
 //8Ball gif URLS
@@ -235,11 +238,7 @@ function update8BallImage(ans){
     if(ans == "As I see it, yes."){
         ballImg.src = ballGifs[22];
     }
-    
-
 }
-
-
 
 var ballGifs = [
     "https://piskel-imgstore-b.appspot.com/img/9bafd921-1465-11ed-9776-f1b5740cb228.gif", //8Ball Spin
