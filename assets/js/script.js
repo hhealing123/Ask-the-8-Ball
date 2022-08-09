@@ -21,18 +21,13 @@ luck.onclick = function(){
   fetch('https://magic-8-ball1.p.rapidapi.com/my_answer/', options)
   .then(response => response.json())
   .then(data =>{
-    update8BallImage(ballResult);
     ballResult = data['answer'];
     affCom = data['answer_type'];
+    update8BallImage(ballResult);
     console.log(ballResult + ' ' + affCom)
-    //result.innerHTML = ballResult;
-    if (aff == 'non-committal'){
-      document.body.style.background = 'yellow';
-    }
   })
 
   console.log(question);
-  //check what answer is, display gif based on answer
 }
 
 
