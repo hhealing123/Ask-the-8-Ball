@@ -42,8 +42,6 @@ if (localStorage.getItem(enteredUser) == null){
 }
 
 //toAttach is wherever on the HTML the avatar container will be appended to
-var toAttach = document.getElementById('box');
-
 var toAttach = document.getElementById('navbar');
 
 //creating the container for avatar picture and user name
@@ -83,20 +81,9 @@ toAttach.appendChild(avatarContainer);
 
 getApi();
 
-
 //8ball
 var inputQuestion = document.getElementById("questionInput");
 var ask8BallButton = document.getElementById("ask8BallButton");
-
-//will be set to element of the current question in html input box
-var currentQuestion = '';
-
-//will be set to element of current 8ball response in html text box
-var newest8BallResponse = '';
-
-//will be set to element of current 8ball affirmative/negative response
-//consider using a boolean here
-var newest8BallAffNeg = '';
 
 //Function Creates new User and adds it to the end of the localstorage list
 function createNewUser(nameInput){
