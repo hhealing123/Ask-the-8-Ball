@@ -32,6 +32,7 @@ var requestUrl = 'https://api.multiavatar.com/';
 
 //This enteredUser variable will change to contain whatever text is entered into the username box
 var enteredUser = localStorage.getItem("CurrentUsername");
+createQuestionElements(enteredUser);
 
 //Check if user is new user
 if (localStorage.getItem(enteredUser) == null){
@@ -94,6 +95,26 @@ function createNewUser(nameInput){
     localStorage.setItem(nameInput, JSON.stringify(newUser));
     
 }
+
+//Refreshes the questions section with the new questions
+function createQuestionElements(user){
+    user = JSON.parse(localStorage.getItem(user));
+    box = document.getElementById('previousQuestions');
+    box.innerHTML = " ";
+    h1 = document.createElement('h1');
+    h2 = document.createElement('h2');
+    h1.textContent = "Previous Questions";
+    h2.textContent = "List of questions here!";
+    box.appendChild(h1);
+    box.appendChild(h2);
+    for(var i=0; i<user.questions.length; i++){
+        el = document.createElement('h4');
+        el.textContent = user.questions[i][0] + ": " + user.questions[i][1];
+        
+        box.appendChild(el);
+    }
+}
+
 //Takes the inputted question and adds it to the user. NOTE: Assumes the user has already been created
 function addQuestion(userName, questionInput){
 
@@ -116,6 +137,7 @@ function addQuestion(userName, questionInput){
         localStorage.setItem(userName, JSON.stringify(user));
         update8BallImage(questionAnswer);
         updateBackground(questionAffCom);
+        createQuestionElements(enteredUser);
     });
 }
 
@@ -124,6 +146,7 @@ ask8BallButton.addEventListener("click", function(){
     console.log(currentQuestion);
     addQuestion(enteredUser, inputQuestion.value);
     inputQuestion.value = '';
+    
 })
 
 inputQuestion.addEventListener("keypress", function(event) {
