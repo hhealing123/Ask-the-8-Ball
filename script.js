@@ -10,7 +10,6 @@ const options = {
   }
 }
 
-let questions = []
 luck.onclick = function(){
   let question;
   question = document.getElementById('question').value;
@@ -23,7 +22,5 @@ luck.onclick = function(){
     result.innerHTML = ballResult;
   })
   console.log(question);
-  questions.push(question);
-  localStorage.setItem('UserQuestion', JSON.stringify(question) );
 
 }
