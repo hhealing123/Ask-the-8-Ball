@@ -1,3 +1,32 @@
+//michael's code
+//fix element id's if needed
+var luck = document.querySelector("button");
+var result = document.querySelector('.result');
+
+const options = {
+  method: 'GET',
+  url: 'https://magic-8-ball1.p.rapidapi.com/my_answer/',
+  headers: {
+    'X-RapidAPI-Key': 'afae7ab92emsh70e7b9a600e0dafp15f82djsn224d672302c4',
+    'X-RapidAPI-Host': 'magic-8-ball1.p.rapidapi.com'
+  }
+}
+
+luck.onclick = function(){
+  let question;
+  question = document.getElementById('question').value;
+  fetch('https://magic-8-ball1.p.rapidapi.com/my_answer/', options)
+  .then(response => response.json())
+  .then(data =>{
+    var ballResult = data['answer'];
+    var aff = data['answer_type'];
+    console.log(ballResult + ' ' + aff)
+    result.innerHTML = ballResult;
+  })
+  console.log(question);
+
+}
+
 //8Ball gif URLS
 var ballGifs = [
 "https://piskel-imgstore-b.appspot.com/img/9bafd921-1465-11ed-9776-f1b5740cb228.gif", //8Ball Spin
