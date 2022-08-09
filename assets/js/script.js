@@ -102,16 +102,15 @@ function createQuestionElements(user){
     box = document.getElementById('previousQuestions');
     box.innerHTML = " ";
     h1 = document.createElement('h1');
-    h2 = document.createElement('h2');
     h1.textContent = "Previous Questions";
-    h2.textContent = "List of questions here!";
     box.appendChild(h1);
-    box.appendChild(h2);
-    for(var i=0; i<user.questions.length; i++){
-        el = document.createElement('h4');
-        el.textContent = user.questions[i][0] + ": " + user.questions[i][1];
-        
-        box.appendChild(el);
+    if(user != null){
+        for(var i=0; i<user.questions.length; i++){
+            el = document.createElement('h4');
+            el.textContent = user.questions[i][0] + ": " + user.questions[i][1];
+            
+            box.appendChild(el);
+        }
     }
 }
 
