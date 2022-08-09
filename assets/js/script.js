@@ -125,6 +125,13 @@ ask8BallButton.addEventListener("click", function(){
     addQuestion(enteredUser, inputQuestion.value);
     inputQuestion.value = '';
 })
+
+inputQuestion.addEventListener("keypress", function(event) {
+    if(event.key === "Enter") {
+        event.preventDefault();
+        ask8BallButton.click();
+    }
+})
 //8Ball gif URLS
 
 var ballImg = document.getElementById("eightBA");

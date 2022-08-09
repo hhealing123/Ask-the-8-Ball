@@ -15,6 +15,13 @@ usernameButton.addEventListener("click", function(){
     
 })
 
+enteredUsernameEl.addEventListener("keypress", function(event){
+    if(event.key === "Enter"){
+        event.preventDefault();
+        usernameButton.click();
+    }
+})
+
 $( function() {
     $( document ).tooltip();
   } );
