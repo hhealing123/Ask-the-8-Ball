@@ -25,6 +25,10 @@ function updateBackground(questionStatus){
         document.body.style.removeProperty('background-color');
         document.body.style.backgroundColor="green";
       }
+    if (questionStatus == "reset"){
+        document.body.style.removeProperty('background-color');
+        document.body.style.backgroundColor="whitesmoke";
+    }
 }
 
 //API request URL
@@ -137,15 +141,24 @@ function addQuestion(userName, questionInput){
         update8BallImage(questionAnswer);
         updateBackground(questionAffCom);
         createQuestionElements(enteredUser);
+        if (canReset){
+            inputQuestion.addEventListener("keypress", function(){
+                updateBackground("reset");
+                update8BallImage("reset");
+                canReset = false;
+            })
+        }
     });
 }
+
+var canReset = false;
 
 ask8BallButton.addEventListener("click", function(){
     currentQuestion = inputQuestion.value;
     console.log(currentQuestion);
     addQuestion(enteredUser, inputQuestion.value);
     inputQuestion.value = '';
-    
+    canReset = true;
 })
 
 inputQuestion.addEventListener("keypress", function(event) {
@@ -218,6 +231,9 @@ function update8BallImage(ans){
     }
     if(ans == "As I see it, yes."){
         ballImg.src = ballGifs[22];
+    }
+    if(ans == "reset") {
+        ballImg.src = ballGifs[0];
     }
 }
 
