@@ -32,7 +32,6 @@ var enteredUser = localStorage.getItem("CurrentUsername");
 
 //toAttach is wherever on the HTML the avatar container will be appended to
 var toAttach = document.getElementById('box');
-=======
 var toAttach = document.getElementById('navbar');
 
 //creating the container for avatar picture and user name
