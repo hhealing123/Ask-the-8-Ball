@@ -32,6 +32,8 @@ var enteredUser = localStorage.getItem("CurrentUsername");
 
 //toAttach is wherever on the HTML the avatar container will be appended to
 var toAttach = document.getElementById('box');
+=======
+var toAttach = document.getElementById('navbar');
 
 //creating the container for avatar picture and user name
 var avatarContainer = document.createElement('div');
@@ -39,9 +41,6 @@ var avatarContainer = document.createElement('div');
 //creating text element to store user name, then sets text content to enteredUser
 var avatarNameElement = document.createElement('p');
 avatarNameElement.textContent = enteredUser;
-
-//TEMPORARY BORDER- to show where the container extends
-avatarContainer.style.border = '5px solid pink';
 
 //hardcoded style attribute to display contents of container inline
 avatarContainer.style.display = 'inline-flex';
@@ -88,8 +87,6 @@ var newest8BallResponse = '';
 //consider using a boolean here
 var newest8BallAffNeg = '';
 
-
-
 //Function Creates new User and adds it to the end of the localstorage list
 function createNewUser(nameInput){
     var newUser = {
@@ -113,13 +110,21 @@ function addQuestion(userName, questionInput){
 
 
 var currentUser = {};
+/*
+var userStoredDataExample = {
+    name: "name",
+    prevQuestions: [["Question?", "Answer", "Aff/Neg"], ["Question?", "Answer", "Aff/Neg"]]
+}
+
+var currentUser = {};
+
 for (user in localStorage){
     if (enteredUser === user.name){
         currentUser = user;
         break;
     }
 }
-
+*/
 
 
 ask8BallButton.addEventListener("click", function(){
