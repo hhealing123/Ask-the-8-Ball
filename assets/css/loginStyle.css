@@ -1,0 +1,40 @@
+#loginEightBall {
+    height: 40%;
+    width: 20%;
+}
+/* 
+span[game-descr] {
+    position: relative;
+    cursor: grab;
+}
+
+span[game-descr]:hover::after {
+    font-size: 12px;
+    content: attr(game-descr);
+    position: absolute;
+    left: 150px;
+    width: 500px;
+    height: 150px;
+    left: 0px;
+    background-color: rgb(132, 126, 216);
+    color: #fff;
+    z-index: 1;
+    line-height: 15px;
+}
+
+span[game-intro] {
+    position: relative;
+    cursor: grab;
+}
+
+span[game-intro]:hover::after {
+    font-size: 12px;
+    content: attr(game-intro);
+    position: absolute;
+    width: 800px;
+    height: 250px;
+    right: 0px;
+    background-color: rgb(132, 126, 216);
+    color: #fff;
+    z-index: 1;
+} */

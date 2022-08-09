@@ -1,0 +1,52 @@
+h1,
+h2 {
+  text-align: center;
+}
+
+.welcomePage-container,
+.playGames-container {
+  text-align: center;
+}
+body{
+  background-color: LightSlateGray;
+}
+
+.nav-wrapper{
+  background-color: cornflowerblue;
+}
+
+section {
+  margin-top: 20px;
+  /*display: flex;*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  
+
+  /* Scroll Snap */
+  scroll-snap-align: center;
+}
+
+#welcomePage {
+  font-size: 55px !important;
+}
+
+#ask8BallButton {
+  margin-top: 10px;
+}
+
+#playGameTitle {
+  font-size: 100px !important;
+}
+
+#enteredUNButton {
+  margin-top: 10px;
+}
+
+#eightBA {
+  height: 60%;
+  margin-top: 0;
+}

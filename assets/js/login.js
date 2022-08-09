@@ -1,35 +1,27 @@
-//Change to textBox later
-var userName = "name";
+//get username from textbox on click
+var enteredUsernameEl = document.getElementById("enteredUN");
+var usernameButton = document.getElementById("enteredUNButton");
 
-//Get # of stored names from localStorage
-storedUserCount= localStorage.getItem("count");
-if(storedUserCount == null){
-    storedUserCount=0;
-}
+var username = "ERROR";
 
-//Get all the stored names and put into list
-userNames = [];
-for(var i=0; i<storedUserCount; i++){
-    userNames.push(localStorage.getItem(String(i)))
-}
-
-
-//check if userInput is equal to the stored names
-var isNewUser=true;
-for(var i=0; i<userNames.length; i++){
-    if(userNames[i] == userName){
-        isNewUser=false;
+usernameButton.addEventListener("click", function(){
+    username = enteredUsernameEl.value;
+    if(username!=""){
+        
+    console.log(username);
+    localStorage.setItem("CurrentUsername", username);
+    window.location.replace("index.html");
     }
-}
+    
+})
 
-//If its a new user, create an avatar
-if(isNewUser){
-    //Add new name to local Storage
-    localStorage.setItem("count", storedUserCount+1);
-    localStorage.setItem(String(storedUserCount+1), userName);
+enteredUsernameEl.addEventListener("keypress", function(event){
+    if(event.key === "Enter"){
+        event.preventDefault();
+        usernameButton.click();
+    }
+})
 
-    //Add Avatar to localStorage (Somehow lol)
-}
-
-
-
+$( function() {
+    $( document ).tooltip();
+  } );
