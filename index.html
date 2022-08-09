@@ -25,11 +25,14 @@
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper">
+          <!-- Target Menu when screen changes to Mobile -->
+          <a href="#" class="sidenav-trigger" data-target="mobile-links">
+            <i class="material-icons">menu</i>
+          </a>
           <!-- <a id="playGame" href="#!" class="brand-logo center"
             >Ask the Magic 8 Ball</a
           > -->
-          <ul class="right hide-on-med-and-down" id="navbar">
-          </ul>
+          <ul class="right hide-on-med-and-down" id="navbar"></ul>
           <ul class="left hide-on-med-and-down">
             <li>
               <a href="login.html">Welcome Page</a>
@@ -42,6 +45,13 @@
         </div>
       </nav>
     </div>
+
+    <!-- Creates Menu for the Hamburger Menu Icon -->
+    <ul class="sidenav" id="mobile-links">
+      <li><a href="">Welcome Page</a></li>
+      <li><a href="">8 Ball</a></li>
+      <li><a href="">Previous Questions</a></li>
+    </ul>
     <!-- Play the Magic 8 Ball sect -->
     <section id="playGame" class="playGames-container">
       <h1 id="playGameTitle" class="playGameTitle blue-text text-darken-2">
@@ -50,10 +60,14 @@
       <br /><br /><br /><br />
       <!--<h1 class="red-text text-darken-2">Magic 8 Ball picture here!</h1> -->
       <!-- 8 Ball Animation -->
-      <img src="https://piskel-imgstore-b.appspot.com/img/3cf3515c-1451-11ed-a2dd-f1b5740cb228.gif" alt="8BallAnimation" id="eightBA">
+      <img
+        src="https://piskel-imgstore-b.appspot.com/img/3cf3515c-1451-11ed-a2dd-f1b5740cb228.gif"
+        alt="8BallAnimation"
+        id="eightBA"
+      />
       <h2>Type your questions here!</h2>
       <button id="typeQuestion" class="btn btn-primary btn-lg btn-lg-primary">
-      Submit
+        Submit
       </button>
       <br />
       <input type="" placeholder="Type your question here!" />
@@ -72,5 +86,15 @@
     <script src="./assets/js/script.js"></script>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <!-- Below activates sidenav for Materialize to display Mobile devices -->
+    <script>
+      $(document).ready(function () {
+        $(".sidenav").sidenav();
+      });
+    </script>
   </body>
 </html>
