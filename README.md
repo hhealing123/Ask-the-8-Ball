@@ -1,7 +1,7 @@
 # Project 1: Ask the Magic 8 Ball
 
 ## Description
-For our project, we hav decided to create an application - The Magic 8 Ball. The Magic 8 Ball is an oversized sphere that is used for fortune telling or when one is seeking for an advice for their question(s). The Magic 8 Ball provides the users with answers to the question that the user asks where the answers are pulled from the following answer categories: affirmative answers, negative answers, and neutral answers. The application will run in the browser and feature dynamically updated HTML and CSS powered by variety of javaScript APIs, CSS APIs, Bootstrap, and jQuery. 
+For our project, we hav decided to create an application - The Magic 8 Ball. The Magic 8 Ball is an oversized sphere that is used for fortune telling or when one is seeking for an advice for their question(s). The Magic 8 Ball provides the users with answers to the question that the user asks where the answers are pulled from the following answer categories: affirmative answers, negative answers, and neutral answers. The application will run in the browser and feature dynamically updated HTML and CSS powered by variety of JavaScript APIs, CSS APIs, Bootstrap, and jQuery. 
 
 ## User Story
 AS AN player
@@ -18,10 +18,10 @@ SO THAT I can decide whether or not to perform an action to the questions that I
     * Example I: Avatar API; this allows users to have their own avatar based on their name that they put in the login page.
     * Example II: The Magic 8 Ball API; this allows the Magic 8 Ball to return variety answers from the answer pool.
     * Example III: jQuery (Tooltip), Materialize and Google APIs (CSS Styling), Bootstrap, and etc.
-* Perform stand-ups every meetings to go over what we will acheive for the day and the issues that we had on the previous meetings.
+* Perform stand-ups every meetings to go over what we will achieve for the day and the issues that we had on the previous meetings.
 * Create login and game HTML. 
 * Style the HTML page using CSS APIs.
-* Create JavaScript(s) to create more dynamic and interative application.
+* Create JavaScript(s) to create more dynamic and interactive application.
 * Comment as we write down the lines in our codes.
 * Commit and Push as we make changes. Make sure to write descriptive and informative comments!
 * Gather all files, then commit, push, and merge all files to dev branch.
