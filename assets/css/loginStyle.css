@@ -12,12 +12,14 @@ span[game-descr]:hover::after {
     font-size: 12px;
     content: attr(game-descr);
     position: absolute;
-    width: 800px;
-    height: 200px;
+    left: 150px;
+    width: 500px;
+    height: 150px;
     left: 0px;
     background-color: rgb(132, 126, 216);
     color: #fff;
     z-index: 1;
+    line-height: 15px;
 }
 
 span[game-intro] {
